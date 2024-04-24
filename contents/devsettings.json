@@ -1,0 +1,46 @@
+{
+  "EnvironmentVariables": [
+    {
+      "SchemaName": "ce_ContosoTestingVariable001",
+      "Value": "",
+      "Name": {
+        "Default": "ContosoTestingVariable001",
+        "ByLcid": {
+          "1033": "ContosoTestingVariable001"
+        }
+      }
+    },
+    {
+      "SchemaName": "cu_ContosoUniversitySPOITList",
+      "Value": "",
+      "Name": {
+        "Default": "ContosoUniversitySPOITList",
+        "ByLcid": {
+          "1033": "ContosoUniversitySPOITList"
+        }
+      }
+    },
+    {
+      "SchemaName": "cu_ContosoUniversitySPOITSite",
+      "Value": "",
+      "Name": {
+        "Default": "ContosoUniversitySPOITSite",
+        "ByLcid": {
+          "1033": "ContosoUniversitySPOITSite"
+        }
+      }
+    }
+  ],
+  "ConnectionReferences": [
+    {
+      "LogicalName": "ce_ContosoUniversityDataverseConnectionReference",
+      "ConnectionId": "",
+      "ConnectorId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+    },
+    {
+      "LogicalName": "cu_ContosoUniversitySPOITConRef",
+      "ConnectionId": "",
+      "ConnectorId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline"
+    }
+  ]
+}
