@@ -1,0 +1,28 @@
+# Workflow to pack a solution and upload it as a build artifact
+name: Pack Contoso_University_Core
+
+on:
+  push:
+    paths:
+      - contents/**
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4.1.1
+      - name: Install Power Platform Actions
+        uses: microsoft/powerplatform-actions/actions-install@v1.2.0
+      - name: Pack contoso_university_core solution
+        uses: microsoft/powerplatform-actions/pack-solution@v1.2.0
+        with:
+          solution-file: out/contoso_university_core.zip
+          solution-folder: contents
+          solution-type: Both
+      - name: Upload packed solution to artifact
+        uses: actions/upload-artifact@v3.1.3
+        with:
+          name: packed-solution
+          path: out/
